@@ -27,7 +27,7 @@ function updateHeader() {
 
     //lists user inputs
     const list = document.querySelector("#flicks");
-    list.textContent += newHeader;
+    list.innerHTML += `<li>${newHeader}</li>`; //template literal (can also use <br>)
 }
 
 /*
