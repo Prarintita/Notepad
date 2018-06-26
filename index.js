@@ -18,9 +18,20 @@ button.addEventListener('click', updateText); //for second click
 
 function updateHeader() {
     const newHeader = document.querySelector('#newHeader').value;
+    // OR = event.target.value
     if (newHeader !== "") { //will not change to empty string
         header.textContent = newHeader;
         clicked = true;
     }
     event.preventDefault(); //will not reset page
+
+    //lists user inputs
+    const list = document.querySelector("#flicks");
+    list.textContent += newHeader;
 }
+
+/*
+    OR call the form instead of the specific button
+    const form = document.querySelector('#flickform');
+    form.addEventListener('submit', updateHeader);
+*/
