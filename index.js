@@ -17,3 +17,11 @@ if (i % 2 === 0) {
 } else {
     button.addEventListener('click', updateText);
 }
+
+function newHeaderName() {
+    const newHeader = document.querySelector('#newHeader').value;
+    header.textContent = newHeader;
+}
+
+// const submitBtn = document.querySelector('#submitBtn');
+// submitBtn.addEventListener('click', newHeaderName);

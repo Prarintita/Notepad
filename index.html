@@ -8,10 +8,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <h1>Chrismess</h1>
+    <h1 id='mainHeader'>Chrismess</h1>
     <h2 id='change'>A mess of Chrisses</h2>
-    <h2>More of a mess...</h2>
-    <button>Click Me!</button>
+    <h2>More of a mess...?</h2>
+    <button>Click Me!</button><br><br>
     <script src="index.js"></script>
+
+    <form id='mainHeaderChangeForm' method="get">
+        <p>Change the main heading title here!</p>
+
+        Main Heading Title:
+        <input id="newHeader" type="text" name="headerTitle" placeholder="Your new header title" required><br>
+        <input id="submitBtn" type="submit" value="Submit" accesskey="enter">
+    </form>
 </body>
 </html>
