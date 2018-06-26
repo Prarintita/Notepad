@@ -1,15 +1,15 @@
 const button = document.querySelector('button');
 const header = document.querySelector('h1');
+const header2 = document.querySelector('#change');
 
 let i = 0;
 const updateText = function() {
     if (i % 2 === 0) {
-        header.textContent = 'Again!';
+        header.textContent = 'Try again!';
     } else {
-        header.textContent = 'Tada!';
+        header2.textContent = 'Tada!';
     }
     i++;
-    console.log(i);
 };
 
 if (i % 2 === 0) {
