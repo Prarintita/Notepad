@@ -26,8 +26,12 @@ function updateHeader() {
     event.preventDefault(); //will not reset page
 
     //lists user inputs
+    const item = document.createElement('li');
+    item.textContent = newHeader;
+
     const list = document.querySelector("#flicks");
-    list.innerHTML += `<li>${newHeader}</li>`; //template literal (can also use <br>)
+    //list.innerHTML += `<li>${newHeader}</li>`; // OR below
+    list.appendChild(item);
 }
 
 /*
