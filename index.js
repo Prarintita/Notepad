@@ -36,24 +36,27 @@ function userInputHeaders() {
         header2.textContent = newSecondHeader;
     }
 
-    listUserInputs();
+    listUserInputs(newMainHeader, newSecondHeader);
+
+    document.querySelector('#newMainHeader').value = "";
+    document.querySelector('#newSecondHeader').value = "";
 }
 
-function listUserInputs() {
+function listUserInputs(newMainHeader, newSecondHeader) {
     event.preventDefault();
 
     //lists user inputs
     //Main header
     const item1 = document.createElement('li');
     item1.className = "mainHeader";
-    item1.textContent = document.querySelector('#newMainHeader').value;
+    item1.textContent = newMainHeader;
     const list1 = document.querySelector("#head");
     list1.appendChild(item1);
     
     //Second header
     const item2 = document.createElement('li');
     item2.className = "secondHeader";
-    item2.textContent = document.querySelector('#newSecondHeader').value;
+    item2.textContent = newSecondHeader;
     const list2 = document.querySelector("#body");
     list2.appendChild(item2);
 }
