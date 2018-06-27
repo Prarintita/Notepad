@@ -9,41 +9,31 @@
 </head>
 <body>
     <div class="col1">
-        <h1 class="mainHeader">Chrismess</h1>
-        <h2 class="secondHeader">A mess of Chrisses</h2>
-        <h2 id='change'>More of a mess...?</h2>
-        <button>Click Me!</button><br><br>
+        <header>
+            <h1>NOTEPAD</h1>
+            <img src="" alt="">
+        </header>
         <script src="index.js"></script>
     </div>
     <div class="col2">
         <form id="form1">
-            <h3>Change the main heading title here!</h3>
+            <h2 class="mainHeader">Title:</h2>
+            <input id="newMainHeader" type="text" name="headerTitle" placeholder="Your title" required autofocus><br>
 
-            <p class="mainHeader">Main Heading Title:</p>
-            <input id="newMainHeader" type="text" name="headerTitle" placeholder="Your new header title" required autofocus><br>
+            <h2 class="secondHeader">Description:</h2>
+            <input id="newSecondHeader" type="text" name="secondHeaderTitle" placeholder="Your description" required><br>
         
             <br>
-            <h3>Change the second line here!</h3>
 
-            <p class="secondHeader">2nd Heading Title:</p>
-            <input id="newSecondHeader" type="text" name="secondHeaderTitle" placeholder="Your new 2nd header title" required><br>
-        
-            <input type="submit" value="Submit" onclick="userInputHeaders()" accesskey="enter">
+            <input type="submit" value="Post" onclick="listUserInputs()" accesskey="enter">
             <!-- OR <button type="submit">Submit</button>-->
         </form>
     </div>
     <div class="col3">
-        <h3 class="mainHeader">Your Titles:</h3>
+        <h2 class="mainHeader">Your Notes:</h2>
         <ul id="head" style="list-style-type: disc">
             <!-- contains user inputs -->
-        </ul>        
-    </div>
-    <br>
-    <div class="col4">
-        <h3 class="secondHeader">Your 2nd Heading Titles:</h3>
-        <ul id="body" style="list-style-type: square">
-            <!-- contains user inputs -->
-        </ul>
+        </ul>   
     </div>
 </body>
 </html>
