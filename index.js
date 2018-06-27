@@ -1,14 +1,15 @@
 const button = document.querySelector('button');
 const header = document.querySelector('h1');
-const header2 = document.querySelector('#change');
+const header2 = document.querySelector('h2');
+const header3 = document.querySelector('#change');
 
+//user clicks button
 let i = 0;
-let clicked = false; //will not change header again if already clicked on
 const updateText = function() {
-    if (i % 2 === 0 && clicked === false) {
+    if (i % 2 === 0) {
         header.textContent = 'Try again!';
     } else {   
-        header2.textContent = 'Tada!';
+        header3.textContent = 'Tada!';
     }
     i++;
 };
@@ -16,26 +17,40 @@ const updateText = function() {
 button.addEventListener('click', updateText); //for the first click
 button.addEventListener('click', updateText); //for second click
 
-function updateHeader() {
-    const newHeader = document.querySelector('#newHeader').value;
-    // OR = event.target.value
-    if (newHeader !== "") { //will not change to empty string
-        header.textContent = newHeader;
-        clicked = true;
+//waiting for user input
+function userInputHeaders() {
+    event.preventDefault();
+    
+    //changes main header
+    const newMainHeader = document.querySelector('#newMainHeader').value;
+    if (newMainHeader !== "") { //will not change to empty string
+        header.textContent = newMainHeader;
     }
-    event.preventDefault(); //will not reset page
+
+    //changes 2nd header
+    const newSecondHeader = document.querySelector('#newSecondHeader').value;
+    if (newSecondHeader !== "") {
+        header2.textContent = newSecondHeader;
+    }
+
+    event.preventDefault();
 
     //lists user inputs
-    const item = document.createElement('li');
-    item.textContent = newHeader;
-
-    const list = document.querySelector("#flicks");
-    //list.innerHTML += `<li>${newHeader}</li>`; // OR below
-    list.appendChild(item);
+    //Main header
+    const item1 = document.createElement('li');
+    item1.textContent = newMainHeader;
+    const list1 = document.querySelector("#head");
+    list1.appendChild(item1);
+    
+    //Second header
+    const item2 = document.createElement('li');
+    item2.textContent = newSecondHeader;
+    const list2 = document.querySelector("#body");
+    list2.appendChild(item2);
 }
 
 /*
     OR call the form instead of the specific button
     const form = document.querySelector('#flickform');
-    form.addEventListener('submit', updateHeader);
+    form.addEventListener('submit', userInputHeaders);
 */
