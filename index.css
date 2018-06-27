@@ -11,3 +11,8 @@ body {
 .secondHeader {
     color: red;
 }
+
+.col1, .col2, .col3, .col4 {
+    width: 33.33%;
+    float: left;
+}

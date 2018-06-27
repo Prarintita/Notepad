@@ -8,40 +8,42 @@
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <h1 class="mainHeader">Chrismess</h1>
-    <h2 class="secondHeader">A mess of Chrisses</h2>
-    <h2 id='change'>More of a mess...?</h2>
-    <button>Click Me!</button><br><br>
-    <script src="index.js"></script>
+    <div class="col1">
+        <h1 class="mainHeader">Chrismess</h1>
+        <h2 class="secondHeader">A mess of Chrisses</h2>
+        <h2 id='change'>More of a mess...?</h2>
+        <button>Click Me!</button><br><br>
+        <script src="index.js"></script>
+    </div>
+    <div class="col2">
+        <form id="form1">
+            <h3>Change the main heading title here!</h3>
 
-    <form id="form1">
-        <p>Change the main heading title here!</p>
-
-        <p class="mainHeader">Main Heading Title:</p>
-        <input id="newMainHeader" type="text" name="headerTitle" placeholder="Your new header title" required autofocus><br>
+            <p class="mainHeader">Main Heading Title:</p>
+            <input id="newMainHeader" type="text" name="headerTitle" placeholder="Your new header title" required autofocus><br>
         
-        <br>
-        <p>Change the second line here!</p>
+            <br>
+            <h3>Change the second line here!</h3>
 
-        <p class="secondHeader">2nd Heading Title:</p>
-        <input id="newSecondHeader" type="text" name="secondHeaderTitle" placeholder="Your new 2nd header title" required><br>
+            <p class="secondHeader">2nd Heading Title:</p>
+            <input id="newSecondHeader" type="text" name="secondHeaderTitle" placeholder="Your new 2nd header title" required><br>
         
-        <input type="submit" value="Submit" onclick="userInputHeaders()" accesskey="enter">
-        <!-- OR <button type="submit">Submit</button>-->
-
-    </form>
-    
+            <input type="submit" value="Submit" onclick="userInputHeaders()" accesskey="enter">
+            <!-- OR <button type="submit">Submit</button>-->
+        </form>
+    </div>
+    <div class="col3">
+        <h3 class="mainHeader">Your Titles:</h3>
+        <ul id="head" style="list-style-type: disc">
+            <!-- contains user inputs -->
+        </ul>        
+    </div>
     <br>
-    <p class="mainHeader">Your Titles:</p>
-    <ul id="head" style="list-style-type: disc">
-        <!-- contains user inputs -->
-    </ul>
-
-    <br>
-    <p class="secondHeader">Your 2nd Heading Titles:</p>
-    <ul id="body" style="list-style-type: square">
-        <!-- contains user inputs -->
-    </ul>
-
+    <div class="col4">
+        <h3 class="secondHeader">Your 2nd Heading Titles:</h3>
+        <ul id="body" style="list-style-type: square">
+            <!-- contains user inputs -->
+        </ul>
+    </div>
 </body>
 </html>
