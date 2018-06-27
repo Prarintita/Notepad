@@ -5,9 +5,11 @@ const header3 = document.querySelector('#change');
 
 //user clicks button
 let i = 0;
+let changed = false;
 const updateText = function() {
-    if (i % 2 === 0) {
+    if (i % 2 === 0 && changed === false) {
         header.textContent = 'Try again!';
+        changed = true;
     } else {   
         header3.textContent = 'Tada!';
     }
@@ -25,6 +27,7 @@ function userInputHeaders() {
     const newMainHeader = document.querySelector('#newMainHeader').value;
     if (newMainHeader !== "") { //will not change to empty string
         header.textContent = newMainHeader;
+        changed = true;
     }
 
     //changes 2nd header
@@ -33,17 +36,17 @@ function userInputHeaders() {
         header2.textContent = newSecondHeader;
     }
 
-    event.preventDefault();
-
     //lists user inputs
     //Main header
     const item1 = document.createElement('li');
+    item1.className = "mainHeader";
     item1.textContent = newMainHeader;
     const list1 = document.querySelector("#head");
     list1.appendChild(item1);
     
     //Second header
     const item2 = document.createElement('li');
+    item2.className = "secondHeader";
     item2.textContent = newSecondHeader;
     const list2 = document.querySelector("#body");
     list2.appendChild(item2);

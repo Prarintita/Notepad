@@ -3,3 +3,11 @@
 body {
     font-family: "Encode Sans Condensed", Helvetica, Arial, sans-serif;
 }
+
+.mainHeader {
+    color: blue;
+}
+
+.secondHeader {
+    color: red;
+}

@@ -8,8 +8,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <h1 id='mainHeader'>Chrismess</h1>
-    <h2>A mess of Chrisses</h2>
+    <h1 class="mainHeader">Chrismess</h1>
+    <h2 class="secondHeader">A mess of Chrisses</h2>
     <h2 id='change'>More of a mess...?</h2>
     <button>Click Me!</button><br><br>
     <script src="index.js"></script>
@@ -17,29 +17,30 @@
     <form>
         <p>Change the main heading title here!</p>
 
-        Main Heading Title:
+        <p class="mainHeader">Main Heading Title:</p>
         <input id="newMainHeader" type="text" name="headerTitle" placeholder="Your new header title" required><br>
         
         <br>
         <p>Change the second line here!</p>
 
-        Second Heading Title:
+        <p class="secondHeader">2nd Heading Title:</p>
         <input id="newSecondHeader" type="text" name="secondHeaderTitle" placeholder="Your new 2nd header title" required><br>
         
         <input type="submit" value="Submit" onclick="userInputHeaders()">
         <!-- OR <button type="submit">Submit</button>-->
 
     </form>
+    
     <br>
-    <p>Your titles:</p>
-    <ul id="head">
+    <p class="mainHeader">Your titles:</p>
+    <ul id="head" style="list-style-type: disc">
         <!-- contains user inputs -->
     </ul>
 
     <br>
-    <p>2nd Heading Titles:</p>
-    <ul id="body">
-        
+    <p class="secondHeader">2nd Heading Titles:</p>
+    <ul id="body" style="list-style-type: square">
+        <!-- contains user inputs -->
     </ul>
 
 </body>
