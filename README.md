@@ -2,6 +2,28 @@
 
 The first project for Xtern Bootcamp 2018 Session 3.
 
+## Day 3 Homework
+
+* Store each flick in an array
+
+### Bonus Credit
+
+* Add a `delete` button to each list item that removes it from the list
+
+### Super Mega Bonus Credit
+
+* Remove the flick from the array as well
+
+### Super Mega Bonus Credit Hyper Fighting
+
+* Add a `favorite` button to each flick as well that lets you mark your favorites.
+
+* Display favorites differently.
+
+* Be sure the favorites are recorded appropriately in the array.
+
+
+
 ## Day 2 Homework
 
 * Give the function `updateHeading` a more accurate name.
