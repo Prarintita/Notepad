@@ -79,6 +79,16 @@ function deleteListItem(event) {
 }
 
 function markImportant(event) {
+    //if already important
+    if (event.target.className === "important") {
+        unmarkImportant(event);
+        return;
+    }
+
     //change color to yellow 
     event.target.setAttribute("class", "important");    
+}
+
+function unmarkImportant(event) {
+    event.target.setAttribute("class", "");
 }
