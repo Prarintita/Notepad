@@ -25,6 +25,17 @@ function listUserInputs() {
         //make delete button work when clicked
         deleteBtn.addEventListener('click', deleteListItem);
         
+        //add important button
+        const importantBtn = document.createElement('button');
+        importantBtn.setAttribute("id", index);
+        const excPnt = document.createElement('img');
+        excPnt.setAttribute("src", "exclamationpoint.png")
+        importantBtn.appendChild(excPnt);
+
+        //make important button work when clicked
+        importantBtn.addEventListener('click', markImportant);
+
+        item1.appendChild(importantBtn);
         item1.appendChild(deleteBtn);
 
         //Description of note
@@ -39,7 +50,7 @@ function listUserInputs() {
        
         //store in array
         noteArray.push(item1);
-        console.log(noteArray);
+        console.log(noteArray); //see what's inside array
 
         index++;
     }
@@ -63,5 +74,11 @@ function deleteListItem(event) {
 
     //delete from li element
     item.parentElement.removeChild(item);
+
+    console.log(noteArray);
 }
 
+function markImportant(event) {
+    //change color to yellow 
+    event.target.setAttribute("class", "important");    
+}

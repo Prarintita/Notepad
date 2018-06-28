@@ -30,6 +30,10 @@ body {
     color: blue;
 }
 
+.title#notes {
+    color: green;
+}
+
 .description {
     color: red;
 }
@@ -39,4 +43,13 @@ body {
     float: left;
     margin-right: 10vw;
     margin-left: 3vw;
+}
+
+img {
+    height: 10px;
+    width: 10px;
+}
+
+.important {
+    background-color: yellow;
 }
