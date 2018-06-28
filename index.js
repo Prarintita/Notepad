@@ -1,7 +1,4 @@
-const header = document.querySelector('h1');
-const header2 = document.querySelector('h2');
 const noteArray = [];
-
 let index = 1;
 function listUserInputs() {
     event.preventDefault();
@@ -28,9 +25,7 @@ function listUserInputs() {
         //add important button
         const importantBtn = document.createElement('button');
         importantBtn.setAttribute("id", index);
-        const excPnt = document.createElement('img');
-        excPnt.setAttribute("src", "exclamationpoint.png")
-        importantBtn.appendChild(excPnt);
+        importantBtn.textContent = "!";
 
         //make important button work when clicked
         importantBtn.addEventListener('click', markImportant);
