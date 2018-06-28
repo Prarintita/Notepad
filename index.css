@@ -4,14 +4,14 @@ h1 {
     font-family: cursive;
     text-align: center;
     color: white;
-    font-size: 7vw;
+    font-size: 6vw;
     text-shadow: 3px 3px black;
 }
 
 header {
     background-image: url(pink.jpg);
     background-size: cover;
-    height: 12vw;
+    height: 16vw;
     background-repeat: no-repeat;
     border: 0.5rem solid pink;
 }
@@ -26,11 +26,11 @@ body {
     margin: 0;
 }
 
-.mainHeader {
+.title {
     color: blue;
 }
 
-.secondHeader {
+.description {
     color: red;
 }
 
@@ -38,4 +38,5 @@ body {
     width: 50.%;
     float: left;
     margin-right: 10vw;
+    margin-left: 3vw;
 }
