@@ -1,7 +1,8 @@
 const header = document.querySelector('h1');
 const header2 = document.querySelector('h2');
-const noteArray = {};
+const noteArray = [];
 
+let index = 1;
 function listUserInputs() {
     event.preventDefault();
 
@@ -14,21 +15,53 @@ function listUserInputs() {
         const item1 = document.createElement('li');
         item1.className = "title";
         item1.textContent = newTitle;
-        const list1 = document.querySelector("#head");
-        list1.appendChild(item1);
-    
+        item1.id = index;
+
+        //add delete button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = "Delete";
+        deleteBtn.setAttribute("id", index);
+
+        //make delete button work when clicked
+        deleteBtn.addEventListener('click', deleteListItem);
+        
+        item1.appendChild(deleteBtn);
+
         //Description of note
         const item2 = document.createElement('p');
         item2.className = "description";
         item2.textContent = newDescription;
-        list1.appendChild(item2);
+        item1.appendChild(item2);
 
+        //add entire note to list
+        const list1 = document.querySelector("#head");
+        list1.appendChild(item1);
+       
         //store in array
-        noteArray[newTitle] = newDescription;
+        noteArray.push(item1);
+        console.log(noteArray);
+
+        index++;
     }
 
     //clear input box
     document.querySelector('#newTitle').value = "";
     document.querySelector('#newDescription').value = "";
+}
+
+function deleteListItem(event) {
+    const id = event.target.id;
+    const item = document.getElementById(id);
+
+    //remove from array -- sorry Davey
+    for (var i = 0; i < noteArray.length; i++) {
+        if (noteArray[i].id === id) {
+            noteArray.splice(i, 1);
+            break;
+        }
+    }
+
+    //delete from li element
+    item.parentElement.removeChild(item);
 }
 
