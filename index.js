@@ -1,5 +1,6 @@
 const header = document.querySelector('h1');
 const header2 = document.querySelector('h2');
+const noteArray = {};
 
 function listUserInputs() {
     event.preventDefault();
@@ -21,6 +22,9 @@ function listUserInputs() {
         item2.className = "description";
         item2.textContent = newDescription;
         list1.appendChild(item2);
+
+        //store in array
+        noteArray[newTitle] = newDescription;
     }
 
     //clear input box
