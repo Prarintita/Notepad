@@ -45,6 +45,12 @@ body {
     margin-left: 3vw;
 }
 
+.col4 {
+    width: 100%;
+    float: left;
+    margin-top: 5vw;
+}
+
 img {
     height: 10px;
     width: 10px;
