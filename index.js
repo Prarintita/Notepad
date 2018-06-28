@@ -1,7 +1,11 @@
 const noteArray = [];
+
 let index = 1;
+
 function listUserInputs() {
     event.preventDefault();
+
+    load();
 
     const newTitle = document.querySelector('#newTitle').value;
     const newDescription = document.querySelector('#newDescription').value;
@@ -48,6 +52,8 @@ function listUserInputs() {
         console.log(noteArray); //see what's inside array
 
         index++;
+
+        save();
     }
 
     //clear input box
@@ -69,8 +75,7 @@ function deleteListItem(event) {
 
     //delete from li element
     item.parentElement.removeChild(item);
-
-    console.log(noteArray);
+    save();
 }
 
 function markImportant(event) {
@@ -82,8 +87,19 @@ function markImportant(event) {
 
     //change color to yellow 
     event.target.setAttribute("class", "important");    
+    save();
 }
 
 function unmarkImportant(event) {
     event.target.setAttribute("class", "");
+    save();
+}
+
+function save() {
+    //save to local storage
+    localStorage.setItem('notes', JSON.stringify(document.querySelector('#newTitle').value));
+}
+
+function load() {
+    const notes = JSON.parse(localStorage.getItem('notes'));
 }
