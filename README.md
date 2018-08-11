@@ -1,60 +1,17 @@
-# Chrismess
+# Simple Notepad
 
-The first project for Xtern Bootcamp 2018 Session 3.
+The first project for Xtern Bootcamp 2018 Session 3 -- remodeled!
 
-## Day 3 Homework
+* This is a simple notepad made with basic HTML, CSS, and JavaScript.
 
-* Store each flick in an array
+## Motivation
 
-### Bonus Credit
+* The motivation behind this project came from the Xtern Bootcamp project that was about listing out movies and their actors. It has been altered to be a notepad instead, providing more of a practical purpose to the user.
 
-* Add a `delete` button to each list item that removes it from the list
+## Features
 
-### Super Mega Bonus Credit
+* It features a small form to fill out with your note and displays the note on the side after being saved. The note can be marked as important or deleted once it is no longer needed.
 
-* Remove the flick from the array as well
+## Credits
 
-### Super Mega Bonus Credit Hyper Fighting
-
-* Add a `favorite` button to each flick as well that lets you mark your favorites.
-
-* Display favorites differently.
-
-* Be sure the favorites are recorded appropriately in the array.
-
-
-
-## Day 2 Homework
-
-* Give the function `updateHeading` a more accurate name.
-* Add a second field to the form.
-* Display the value of that field in the list.
-
-### Bonus Credit
-
-* Display the second field in a separate HTML element from the flick name.
-* See if you can then style each field differently.
-
-### Super Mega Bonus Credit
-
-* Use more than one function. Break `updateHeading` (or whatever you end up calling it) into multiple functions, as appropriate.
-
-
-
-## Homework
-
-* Make the button change the text of the heading (the `<h1>`).
-
-### Bonus Credit
-
-* Add multiple headings to the page, and make the button change the second one. (Use a `class` or an `id`.)
-
-### Super Mega Bonus Credit
-
-* Add a form to the page.
-* Add a text input to the form.
-* When the form is submitted, update the heading with the text that you type in the text input.
-
-### Super Mega Bonus Credit Hyper Fighting
-
-* Make sure it works when you press _enter_ on the keyboard, not just when you click the button.
+* Based off Davey's code (dstrus) from the Xtern Bootcamp 2018 Session 3.
